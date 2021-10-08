@@ -35,7 +35,7 @@ try:
         scooter.request(m365message.supplementary)
 
         # m365py also stores a cached state of received values
-        client.publish("Patinete", json.dumps(scooter.cached_state, indent=4, sort_keys=True), retain=True)
+        client.publish("ScooterM365", json.dumps(scooter.cached_state, indent=4, sort_keys=True), retain=True)
 
         # Delay
         time.sleep(10)
